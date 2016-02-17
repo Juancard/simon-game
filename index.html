@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Simon, el juego</title>
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div class="container-fluid juego"  ondragstart="return false;" ondrop="return false;">
+  <div class="panel-simon">
+    <div class="botonMusical clickeable" id="boton-verde"></div>
+    <div class="botonMusical clickeable" id="boton-rojo"></div>
+    <div class="botonMusical clickeable" id="boton-amarillo"></div>
+    <div class="botonMusical clickeable" id="boton-azul"></div>
+  </div>
+  <div class="panel-central container-fluid">
+      <row>
+        <h1 class="col-xs-12">Simon</h1>
+      </row>
+      <row>
+        <div class="panel-enJuego  container-fluid">
+          <row>
+            <input type="text" id="puntos" disabled="disabled" class="col-xs-4 puntosApagado"/>
+            <button type="button" id="btnStart" class="col-xs-2 col-xs-offset-1" onclick="setearJuego()"></button>
+            <div id="btnEstrictoEstado" class="estrictoApagado col-xs-1 col-xs-offset-1"></div>
+            <button id="btnEstricto" class="col-xs-2 col-xs-offset-2" onClick="cambiarEstadoEstricto()"></button>
+
+          </row>
+          <row>
+            <p class="col-xs-4">PUNTOS</p>
+            <p class="col-xs-2 col-sm-offset-1">JUGAR</p>
+            <p class="col-xs-2 col-sm-offset-1">ESTRICTO</p>
+          </row>
+        </div>
+      </row>
+      <row>
+        <div class="panel-switch"> 
+          <p>OFF</p>
+          <div id="switch">
+            <div class="sw sw-izq"></div>
+            <div class="sw sw-der"></div>
+          </div>
+          <p>ON</p>
+        </div>
+      </row>
+    </div>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src="js/index.js"></script>
+  </body>
+</html>
